@@ -1239,8 +1239,9 @@ body._lock {
 
 .suite__image {
   flex: 1 1 55%;
-  border-radius: 12px;
+  border-radius: 16px;
   border: 1px solid #E0E1E7;
+  padding: 2px;
   background: var(--bg);
 }
 
