@@ -5,7 +5,7 @@
     <title>Parta.io</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240716224247">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240724162620">
 </head>
 
 <body>
@@ -22,6 +22,58 @@
                     <ul class="menu__list" data-mob="btns, after">
                         <li class="menu__item">
                             <a href="#" class="menu__link">Platform</a>
+                            <button type="button" class="menu__btn"></button>
+                            <div class="menu__submenu submenu">
+                                <div class="submenu__container container">
+                                    <div class="submenu__body">
+                                        <ul class="submenu__list">
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Course
+                                                    builder</a></li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">No-code
+                                                    editor</a></li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Custom
+                                                    templates</a>
+                                            </li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">(Re)branding</a>
+                                            </li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Real-time
+                                                    collaboration</a></li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Review</a></li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Task
+                                                    management</a></li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Workspace
+                                                    management</a>
+                                            </li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Export</a></li>
+                                            <li class="submenu__item"><a href="#" class="submenu__link">Translation</a>
+                                            </li>
+                                        </ul>
+                                        <div class="submenu__desc">
+                                            <div class="submenu__info">
+                                                <p>
+                                                    Parta.io is a collaborative eLearning creation platform that
+                                                    streamlines
+                                                    workflows and boosts team productivity for L&D and beyond.
+                                                </p>
+                                                <p>
+                                                    Inspired by
+                                                    trailblazers like Notion, Figma, and Miro, we're bringing a new
+                                                    architecture
+                                                    &
+                                                    different level of collaboration to the world of eLearning.
+                                                </p>
+                                            </div>
+                                            <div class="submenu__image lazy">
+                                                <picture>
+                                                    <source data-srcset="img/menu/image.webp" srcset="img/plug.png"
+                                                        type="image/webp">
+                                                    <img data-src="img/menu/image.png" src="img/plug.png" alt="Image">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="menu__item">
                             <a href="#" class="menu__link">Pricing</a>
@@ -539,15 +591,16 @@
     <div class="footer__container container">
         <div class="footer__body">
             <div class="footer__top">
-                <div class="footer__main">
+                <div class="footer__main" data-desk="footer-menus, after">
                     <a href="#" class="footer__logo lazy">
                         <img src="img/logo-footer.svg" alt="Logo">
                     </a>
-                    <p class="footer__text">
+                    <p class="footer__text" data-mob="footer-menus, after" data-desk="email, after">
                         Parta.io is a collaborative eLearning content creation platform. Built interactive eLearning,
                         customize workflows efficiently.
                     </p>
-                    <div class="footer__socials">
+                    <a href="#" class="footer__mail" data-move="email, 576">hello@parta.io</a>
+                    <div class="footer__socials" data-mob="email, after">
                         <a href="#" class="footer__social" title="Youtube">
                             <svg>
                                 <use href="img/icons/icons.svg#youtube"></use>
@@ -560,19 +613,32 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer__menus">
+                <div class="footer__menus" data-spollers="576,max" data-one-spoller data-move="footer-menus, 576">
                     <div class="footer__menu menu-footer">
-                        <h3 class="menu-footer__title">Platform</h3>
+                        <h3 class="menu-footer__title" data-spoller>Platform</h3>
                         <nav class="menu-footer__body">
                             <ul class="menu-footer__list">
-                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">?</a></li>
-                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">?</a></li>
-                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">?</a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Course editor</a>
+                                </li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">No-code editor</a>
+                                </li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Custom templates
+                                    </a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Branding</a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Real-time
+                                        collaboration</a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Review</a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Task management </a>
+                                </li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Workspace
+                                        management</a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Export</a></li>
+                                <li class="menu-footer__item"><a href="#" class="menu-footer__link">Translation</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="footer__menu menu-footer">
-                        <h3 class="menu-footer__title">Comapy</h3>
+                        <h3 class="menu-footer__title" data-spoller>Comapy</h3>
                         <nav class="menu-footer__body">
                             <ul class="menu-footer__list">
                                 <li class="menu-footer__item"><a href="#" class="menu-footer__link">About</a></li>
@@ -583,7 +649,7 @@
                         </nav>
                     </div>
                     <div class="footer__menu menu-footer">
-                        <h3 class="menu-footer__title">Legal</h3>
+                        <h3 class="menu-footer__title" data-spoller>Legal</h3>
                         <nav class="menu-footer__body">
                             <ul class="menu-footer__list">
                                 <li class="menu-footer__item"><a href="#" class="menu-footer__link">Privacy policy</a>
@@ -594,7 +660,7 @@
                         </nav>
                     </div>
                     <div class="footer__menu menu-footer">
-                        <h3 class="menu-footer__title">Get help</h3>
+                        <h3 class="menu-footer__title" data-spoller>Get help</h3>
                         <nav class="menu-footer__body">
                             <ul class="menu-footer__list">
                                 <li class="menu-footer__item"><a href="#" class="menu-footer__link">Help center</a></li>
@@ -615,7 +681,7 @@
 </footer>
     </div>
 
-    <script src="js/app.min.js?_v=20240716224247" defer></script>
+    <script src="js/app.min.js?_v=20240724162620" defer></script>
 </body>
 
 </html>
