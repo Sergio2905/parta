@@ -2189,7 +2189,8 @@ body._lock {
   }
 
   .info_invert .info__btn:hover {
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+    color: var(--black);
+    background: var(--white);
   }
 
   .card-info_invert .card-info__link:hover {
