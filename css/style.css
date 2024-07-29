@@ -227,6 +227,10 @@ body._lock {
   transition: all 0.5s ease;
 }
 
+.header__container {
+  max-width: unset;
+}
+
 .header__body {
   display: flex;
   align-items: center;
@@ -387,6 +391,10 @@ body._lock {
   visibility: hidden;
   transform: translate(0, 50px);
   pointer-events: none;
+}
+
+.submenu__container {
+  max-width: unset;
 }
 
 .submenu__body {
@@ -1507,6 +1515,10 @@ body._lock {
 
 .footer {
   background: var(--black);
+}
+
+.footer__container {
+  max-width: unset;
 }
 
 .footer__body {
