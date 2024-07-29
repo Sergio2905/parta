@@ -2193,16 +2193,6 @@ body._lock {
     background: var(--white);
   }
 
-  .card-info_invert .card-info__link:hover {
-    text-shadow: 0 0 5px #fff;
-    color: var(--black);
-  }
-
-  .card-info__link:hover {
-    text-shadow: 0 0 5px #000;
-    color: var(--white);
-  }
-
   .scroll__btn:hover svg {
     transform: translate(10px, 0);
   }
