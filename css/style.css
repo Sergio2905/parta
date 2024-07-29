@@ -1601,10 +1601,6 @@ body._lock {
   color: var(--white);
 }
 
-.menu-footer__title._active::after {
-  transform: translate(0, -50%) rotate(-180deg);
-}
-
 .menu-footer__item:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -2099,7 +2095,6 @@ body._lock {
 
   .menu-footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;
     padding-bottom: 24px;
   }
 
@@ -2111,23 +2106,6 @@ body._lock {
     margin-bottom: 0;
     cursor: pointer;
     position: relative;
-  }
-
-  .menu-footer__title::before,
-  .menu-footer__title::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 1px;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 10px;
-    background: var(--white);
-  }
-
-  .menu-footer__title::after {
-    transform: translate(0, -50%) rotate(-90deg);
-    transition: all 0.5s ease;
   }
 
   .menu-footer__body {
