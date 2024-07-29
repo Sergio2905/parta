@@ -510,16 +510,18 @@ body._lock {
 }
 
 .main__btns {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 8px;
 }
 
 .main__btn {
+  flex: 1 1 auto;
   height: 56px;
-  width: 180px;
+  max-width: 180px;
+  width: 100%;
 }
 
 .graph {
@@ -1169,6 +1171,7 @@ body._lock {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  color: var(--black);
 }
 
 .card-works_green {
@@ -2201,11 +2204,7 @@ body._lock {
     border-bottom: 1px solid transparent;
   }
 
-  .footer__social:hover svg {
-    fill: #37D71D;
-  }
-
   .menu-footer__link:hover {
-    color: var(--green);
+    color: #757575;
   }
 }
