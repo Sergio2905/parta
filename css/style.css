@@ -218,12 +218,13 @@ body._lock {
 }
 
 .header {
-  background: var(--white);
+  background: var(--gray);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+  transition: all 0.5s ease;
 }
 
 .header__body {
@@ -403,6 +404,13 @@ body._lock {
   margin-right: 40px;
 }
 
+.submenu__item {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .submenu__item:not(:last-child) {
   margin-bottom: 24px;
 }
@@ -413,14 +421,15 @@ body._lock {
   transition: all 0.5s ease;
   position: relative;
   white-space: nowrap;
+  display: block;
 }
 
 .submenu__link::after {
   content: "";
   position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 3px);
   height: 1px;
   width: 0;
   background: rgba(27, 27, 27, 0.3);
@@ -1766,7 +1775,6 @@ body._lock {
     transform: scale(0);
     transition: all 0.5s ease;
     background: var(--gray);
-    border-top: 1px solid var(--black);
     padding: 16px 15px;
     display: flex;
     flex-direction: column;
@@ -2061,6 +2069,10 @@ body._lock {
     margin-bottom: 48px;
   }
 
+  .footer__main {
+    margin: 0;
+  }
+
   .footer__text {
     margin-bottom: 48px;
     max-width: unset;
@@ -2087,6 +2099,7 @@ body._lock {
 
   .menu-footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
     padding-bottom: 24px;
   }
 
@@ -2133,6 +2146,10 @@ body._lock {
 
   .btn-black:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .header:hover {
+    background: var(--white);
   }
 
   .menu__item:hover .menu__submenu {
