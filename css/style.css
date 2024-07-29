@@ -434,6 +434,7 @@ body._lock {
   width: 0;
   background: rgba(27, 27, 27, 0.3);
   transition: all 0.5s ease;
+  pointer-events: none;
 }
 
 .submenu__desc {
@@ -444,6 +445,11 @@ body._lock {
   overflow: hidden;
 }
 
+.submenu__desc.active .submenu__info,
+.submenu__desc.active .submenu__image {
+  opacity: 1;
+}
+
 .submenu__info {
   flex: 1 1 50%;
   padding: 20px;
@@ -451,6 +457,8 @@ body._lock {
   font-size: 0.875rem;
   line-height: 1.7;
   color: #757575;
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .submenu__info p:not(:last-child) {
@@ -461,11 +469,17 @@ body._lock {
   padding-top: 50px;
   flex: 1 1 50%;
   align-self: flex-end;
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .submenu__image img {
   max-width: 100%;
   height: auto;
+}
+
+.submenu__details {
+  display: none;
 }
 
 .main__body {
