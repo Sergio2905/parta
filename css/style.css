@@ -2098,7 +2098,18 @@ body._lock {
   }
 
   .menu-footer {
+    position: relative;
     padding-bottom: 24px;
+  }
+
+  .menu-footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .menu-footer:not(:last-child) {
