@@ -433,6 +433,7 @@ body._lock {
   white-space: nowrap;
   display: block;
   overflow: hidden;
+  padding-bottom: 3px;
 }
 
 .submenu__link.over::after {
