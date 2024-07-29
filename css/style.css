@@ -433,7 +433,7 @@ body._lock {
   height: 1px;
   width: 0;
   background: rgba(27, 27, 27, 0.3);
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   pointer-events: none;
 }
 
@@ -457,7 +457,7 @@ body._lock {
   font-size: 0.875rem;
   line-height: 1.7;
   color: #757575;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   opacity: 0;
 }
 
@@ -2180,10 +2180,6 @@ body._lock {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-  }
-
-  .menu__link:hover {
-    text-shadow: 0 0 5px #37d71d;
   }
 
   .submenu__link:hover::after {
