@@ -1282,40 +1282,80 @@ body._lock {
   background: linear-gradient(180deg, rgb(215, 213, 255) 0%, rgb(250, 250, 250) 100%);
 }
 
+.product_purple .product__title span {
+  color: #736EEF;
+}
+
 .product_light-green::before {
   background: linear-gradient(180deg, rgb(243, 255, 226) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_light-green .product__title span {
+  color: #84E100;
 }
 
 .product_orange::before {
   background: linear-gradient(180deg, rgb(255, 242, 223) 0%, rgb(250, 250, 250) 100%);
 }
 
+.product_orange .product__title span {
+  color: #FF9500;
+}
+
 .product_pink::before {
   background: linear-gradient(180deg, rgb(252, 228, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_pink .product__title span {
+  color: #C300FF;
 }
 
 .product_light-blue::before {
   background: linear-gradient(180deg, rgb(226, 247, 255) 0%, rgb(250, 250, 250) 100%);
 }
 
+.product_light-blue .product__title span {
+  color: #4A849A;
+}
+
 .product_blue::before {
   background: linear-gradient(180deg, rgb(218, 243, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_blue .product__title span {
+  color: #00AEFF;
 }
 
 .product_light-red::before {
   background: linear-gradient(180deg, rgb(255, 224, 224) 0%, rgb(250, 250, 250) 100%);
 }
 
+.product_light-red .product__title span {
+  color: #FF562C;
+}
+
 .product_semi-blue::before {
   background: linear-gradient(180deg, rgb(228, 255, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_semi-blue .product__title span {
+  color: #00D9D9;
 }
 
 .product_green::before {
   background: linear-gradient(180deg, rgb(217, 255, 211) 0%, rgb(250, 250, 250) 100%);
 }
 
+.product_green .product__title span {
+  color: #37D71D;
+}
+
 .product_gold::before {
   background: linear-gradient(180deg, rgb(255, 244, 201) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_gold .product__title span {
+  color: #F2BC01;
 }
 
 .product__body {
