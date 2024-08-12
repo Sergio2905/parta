@@ -140,7 +140,7 @@ h6 {
   --gray: #fafafa;
   --blue: #2D68FF;
   --red: #F24D4D;
-  --bg: url("../img/loading.gif") 50% no-repeat;
+  --bg: url("../img/loading.gif") center / 24px no-repeat;
   --inter: "Inter", sans-serif;
   --onest: "Onest", sans-serif;
 }
@@ -1572,6 +1572,7 @@ body._lock {
   border: 1px solid #E0E1E7;
   padding: 2px;
   background: var(--bg);
+  min-height: 100px;
 }
 
 .suite__image img {
