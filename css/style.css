@@ -187,6 +187,29 @@ body._lock {
   border-radius: 8px;
   padding: 8px 24px;
   white-space: nowrap;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-black span {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.btn-black span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translate(0, -50%);
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .btn-white {
@@ -198,21 +221,30 @@ body._lock {
   padding: 8px 24px;
   border: 1px solid var(--black);
   white-space: nowrap;
-  transition: all 0.5s ease;
-}
-
-.btn-black {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--onest);
-  color: var(--white);
-  font-weight: 500;
-  line-height: 1.5;
-  background: var(--black);
-  padding: 8px 24px;
-  white-space: nowrap;
   transition: all 0.5s ease;
+}
+
+.btn-white span {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.btn-white span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translate(0, -50%);
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header {
@@ -2251,8 +2283,6 @@ body._lock {
     transform: translate(0, 0);
     background: var(--gray);
     height: 0;
-    opacity: 1;
-    visibility: visible;
     overflow: hidden;
     transition: all 0.5s ease;
   }
@@ -2634,9 +2664,33 @@ body._lock {
 }
 
 @media (any-hover: hover) {
+  .btn-black:hover {
+    color: var(--black);
+    background: var(--green);
+  }
+
+  .btn-black:hover span {
+    transform: translate(10px, 0);
+  }
+
+  .btn-black:hover span::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .btn-white:hover {
-    color: var(--white);
-    background: var(--black);
+    color: var(--black);
+    background: var(--green);
+    border: 1px solid var(--green);
+  }
+
+  .btn-white:hover span {
+    transform: translate(10px, 0);
+  }
+
+  .btn-white:hover span::before {
+    opacity: 1;
+    visibility: visible;
   }
 
   .menu__item:hover .menu__submenu {
@@ -2644,11 +2698,6 @@ body._lock {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-  }
-
-  .info_invert .info__btn:hover {
-    color: var(--black);
-    background: var(--white);
   }
 
   .scroll__btn:hover svg {
