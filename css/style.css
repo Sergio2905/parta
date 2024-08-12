@@ -2251,6 +2251,8 @@ body._lock {
     transform: translate(0, 0);
     background: var(--gray);
     height: 0;
+    opacity: 1;
+    visibility: visible;
     overflow: hidden;
     transition: all 0.5s ease;
   }
