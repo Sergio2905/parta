@@ -176,19 +176,17 @@ body._lock {
 
 .page {
   flex: 1 1 auto;
-  padding-top: 72px;
 }
 
-.btn-green {
+.btn-black {
   font-family: var(--onest);
-  color: var(--black);
+  color: var(--white);
   font-weight: 500;
   line-height: 1.5;
-  background: var(--green);
+  background: var(--black);
   border-radius: 8px;
   padding: 8px 24px;
   white-space: nowrap;
-  transition: all 0.5s ease;
 }
 
 .btn-white {
@@ -218,13 +216,18 @@ body._lock {
 }
 
 .header {
-  background: #FAFAFA;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   transition: all 0.5s ease;
+}
+
+.header.fixed,
+.header.hover,
+.header._active {
+  background: #FAFAFA;
 }
 
 .header__container {
@@ -429,7 +432,6 @@ body._lock {
 }
 
 .submenu__link {
-  font-family: var(--onest);
   color: var(--black);
   transition: all 0.5s ease;
   position: relative;
@@ -477,7 +479,6 @@ body._lock {
 .submenu__info {
   flex: 1 1 50%;
   padding: 20px;
-  font-family: var(--onest);
   font-size: 0.875rem;
   line-height: 1.7;
   color: #757575;
@@ -509,6 +510,10 @@ body._lock {
   display: none;
 }
 
+.main {
+  padding-top: 72px;
+}
+
 .main__body {
   display: flex;
   flex-direction: column;
@@ -522,6 +527,10 @@ body._lock {
   font-family: var(--onest);
   font-size: 5rem;
   font-weight: 500;
+}
+
+.main__title span {
+  color: var(--green);
 }
 
 .main__text {
@@ -741,7 +750,6 @@ body._lock {
 
 .manifest__intro {
   margin-bottom: 16px;
-  font-family: var(--onest);
   font-size: 1.5rem;
   line-height: 1.5;
   opacity: 0.5;
@@ -821,7 +829,6 @@ body._lock {
 }
 
 .cards__text {
-  font-size: 1.125rem;
   line-height: 1.5;
 }
 
@@ -871,9 +878,8 @@ body._lock {
 }
 
 .info__header {
-  font-family: var(--onest);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   opacity: 0.5;
@@ -1019,7 +1025,9 @@ body._lock {
 }
 
 .card-info__price span {
+  font-family: var(--inter);
   font-size: 1rem;
+  font-weight: 600;
   margin-top: 8px;
   opacity: 0.5;
 }
@@ -1232,7 +1240,6 @@ body._lock {
 }
 
 .card-works__text {
-  font-family: var(--onest);
   font-size: 1.125rem;
   line-height: 1.5;
   max-width: 370px;
@@ -1253,6 +1260,62 @@ body._lock {
      object-fit: contain;
   -o-object-position: bottom right;
      object-position: bottom right;
+}
+
+.product {
+  padding-top: 72px;
+  position: relative;
+  z-index: 1;
+}
+
+.product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  z-index: -1;
+}
+
+.product_purple::before {
+  background: linear-gradient(180deg, rgb(215, 213, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_light-green::before {
+  background: linear-gradient(180deg, rgb(243, 255, 226) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_orange::before {
+  background: linear-gradient(180deg, rgb(255, 242, 223) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_pink::before {
+  background: linear-gradient(180deg, rgb(252, 228, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_light-blue::before {
+  background: linear-gradient(180deg, rgb(226, 247, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_blue::before {
+  background: linear-gradient(180deg, rgb(218, 243, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_light-red::before {
+  background: linear-gradient(180deg, rgb(255, 224, 224) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_semi-blue::before {
+  background: linear-gradient(180deg, rgb(228, 255, 255) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_green::before {
+  background: linear-gradient(180deg, rgb(217, 255, 211) 0%, rgb(250, 250, 250) 100%);
+}
+
+.product_gold::before {
+  background: linear-gradient(180deg, rgb(255, 244, 201) 0%, rgb(250, 250, 250) 100%);
 }
 
 .product__body {
@@ -1303,6 +1366,8 @@ body._lock {
 
 .highlights {
   margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .highlights__body {
@@ -1355,7 +1420,6 @@ body._lock {
 }
 
 .highlights__desc {
-  font-family: var(--onest);
   line-height: 1.5;
 }
 
@@ -1413,7 +1477,6 @@ body._lock {
 }
 
 .suite__text {
-  font-family: var(--onest);
   line-height: 1.5;
 }
 
@@ -1485,7 +1548,6 @@ body._lock {
 }
 
 .card-suite__text {
-  font-family: var(--onest);
   line-height: 1.5;
   margin-bottom: 80px;
   flex: 1 1 auto;
@@ -1537,7 +1599,7 @@ body._lock {
 }
 
 .footer-suite__text {
-  font-family: var(--onest);
+  font-size: 1.25rem;
   flex: 1 1 50%;
   line-height: 1.5;
 }
@@ -1569,7 +1631,7 @@ body._lock {
 
 .workspace__title {
   font-family: var(--onest);
-  font-size: 3.25rem;
+  font-size: 3.5rem;
   font-weight: 500;
   text-align: center;
   max-width: 740px;
@@ -1617,7 +1679,7 @@ body._lock {
 
 .card-workspace__text {
   flex: 1 1 auto;
-  font-family: var(--onest);
+  line-height: 1.5;
 }
 
 .card-workspace__text p:not(:last-child) {
@@ -1625,7 +1687,7 @@ body._lock {
 }
 
 .card-workspace__text b {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .card-workspace__text:not(:last-child) {
@@ -1715,7 +1777,6 @@ body._lock {
 }
 
 .spollers__text {
-  font-family: var(--onest);
   padding: 24px;
 }
 
@@ -1781,7 +1842,6 @@ body._lock {
 }
 
 .footer__text {
-  font-family: var(--onest);
   font-size: 0.875rem;
   color: var(--white);
   line-height: 1.5;
@@ -1844,7 +1904,6 @@ body._lock {
 }
 
 .footer__rights {
-  font-family: var(--onest);
   line-height: 1.5;
 }
 
@@ -1870,7 +1929,6 @@ body._lock {
 }
 
 .menu-footer__link {
-  font-family: var(--onest);
   line-height: 1.5;
   color: var(--white);
   transition: all 0.5s ease;
@@ -2020,6 +2078,10 @@ body._lock {
     font-size: calc(2rem + 8 * (100vw - 20rem) / 1120);
   }
 
+  .footer-suite__text {
+    font-size: calc(1rem + 4 * (100vw - 20rem) / 1120);
+  }
+
   .tool__body {
     padding: calc(24px + 32 * (100vw - 320px) / 1120);
   }
@@ -2033,7 +2095,7 @@ body._lock {
   }
 
   .workspace__title {
-    font-size: calc(2rem + 20 * (100vw - 20rem) / 1120);
+    font-size: calc(2rem + 24 * (100vw - 20rem) / 1120);
     margin-bottom: calc(40px + 32 * (100vw - 320px) / 1120);
   }
 
@@ -2086,7 +2148,7 @@ body._lock {
     top: 100%;
     right: 0;
     width: 100%;
-    height: calc(100vh - 72px);
+    height: calc(var(--app-height) - 72px);
     transform: scale(0);
     transition: all 0.5s ease;
     background: var(--gray);
@@ -2532,18 +2594,9 @@ body._lock {
 }
 
 @media (any-hover: hover) {
-  .btn-green:hover {
-    background: var(--black);
-    color: var(--white);
-  }
-
   .btn-white:hover {
     color: var(--white);
     background: var(--black);
-  }
-
-  .btn-black:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
 
   .menu__item:hover .menu__submenu {
