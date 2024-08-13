@@ -2038,6 +2038,10 @@ body._lock {
     font-size: calc(2.5rem + 40 * (100vw - 20rem) / 1120);
   }
 
+  .main__text {
+    font-size: calc(1rem + 4 * (100vw - 20rem) / 1120);
+  }
+
   .manifest__body {
     padding: calc(24px + 32 * (100vw - 320px) / 1120);
   }
@@ -2324,10 +2328,6 @@ body._lock {
 
   .submenu__desc {
     display: none;
-  }
-
-  .main__text {
-    font-size: 1rem;
   }
 
   .cursor {
