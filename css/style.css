@@ -180,14 +180,14 @@ body._lock {
 
 .btn-black {
   font-family: var(--onest);
-  color: var(--white);
   font-weight: 500;
   line-height: 1.5;
+  color: var(--white);
   background: var(--black);
   border-radius: 8px;
   padding: 8px 24px;
   white-space: nowrap;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,7 +225,7 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn-white span {
