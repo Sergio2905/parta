@@ -2244,11 +2244,13 @@ body._lock {
     padding: 16px 15px;
     display: flex;
     flex-direction: column;
+    pointer-events: none;
   }
 
   .menu__body._active {
     transform: scale(1);
     opacity: 1;
+    pointer-events: all;
   }
 
   .menu__list {
@@ -2322,6 +2324,10 @@ body._lock {
 
   .submenu__desc {
     display: none;
+  }
+
+  .main__text {
+    font-size: 1rem;
   }
 
   .cursor {
