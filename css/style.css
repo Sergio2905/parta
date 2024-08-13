@@ -187,7 +187,7 @@ body._lock {
   border-radius: 8px;
   padding: 8px 24px;
   white-space: nowrap;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +195,7 @@ body._lock {
 
 .btn-black span {
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-black span::before {
@@ -207,7 +207,7 @@ body._lock {
   width: 20px;
   height: 20px;
   background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
 }
@@ -225,12 +225,12 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-white span {
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-white span::before {
@@ -242,7 +242,7 @@ body._lock {
   width: 20px;
   height: 20px;
   background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
 }
