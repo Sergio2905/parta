@@ -806,6 +806,7 @@ body._lock {
   font-weight: 500;
   line-height: 1.4;
   grid-column: span 4;
+  padding-right: 100px;
 }
 
 .manifest__image {
@@ -2335,6 +2336,7 @@ body._lock {
 
   .manifest__text {
     margin-bottom: 48px;
+    padding: 0;
   }
 
   .cards__body {
