@@ -2707,6 +2707,7 @@ body._lock {
 
   .table__price span {
     font-size: calc(0.75rem + 12 * (100vw - 20rem) / 1120);
+    margin-top: calc(4px + 12 * (100vw - 320px) / 1120);
   }
 
   .table thead td {
