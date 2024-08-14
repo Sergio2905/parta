@@ -834,7 +834,7 @@ body._lock {
 }
 
 .submenu__info p:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .submenu__image {
