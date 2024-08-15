@@ -874,6 +874,14 @@ body._lock {
   font-family: var(--onest);
   font-size: 5rem;
   font-weight: 500;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.main__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .main__title span {
@@ -886,6 +894,14 @@ body._lock {
   font-size: 1.25rem;
   max-width: 750px;
   line-height: 1.5;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.main__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .main__text strong {
@@ -900,11 +916,26 @@ body._lock {
   gap: 8px;
 }
 
+.main__btns.active .main__btn {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 .main__btn {
   flex: 1 1 auto;
   height: 56px;
   max-width: 180px;
   width: 100%;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.main__btn:nth-child(1) {
+  transition: transform 0.8s ease 0.2s, opacity 0.8s ease 0.2s, background 0.3s ease;
+}
+
+.main__btn:nth-child(2) {
+  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, background 0.3s ease;
 }
 
 .graph {
@@ -922,6 +953,14 @@ body._lock {
   width: 79%;
   aspect-ratio: 1085/733;
   position: relative;
+  transition: all 0.8s ease;
+  transform: translate(0, 60px);
+  opacity: 0;
+}
+
+.graph__main.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .graph__main img {
@@ -940,7 +979,14 @@ body._lock {
   bottom: 0;
   width: 25%;
   aspect-ratio: 345/710;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(0, 30%);
+  opacity: 0;
+}
+
+.graph__tasks.active {
   transform: translate(0, 12%);
+  opacity: 1;
 }
 
 .graph__tasks img {
@@ -959,7 +1005,14 @@ body._lock {
   bottom: 0;
   width: 29%;
   aspect-ratio: 404/380;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(-50%, 40%);
+  opacity: 0;
+}
+
+.graph__comments.active {
   transform: translate(-50%, 21%);
+  opacity: 1;
 }
 
 .graph__comments img {
@@ -979,6 +1032,14 @@ body._lock {
   width: 23%;
   aspect-ratio: 312/719;
   transform: translate(0, 12%);
+  transition: all 0.8s ease 0.1s;
+  transform: translate(0, 30%);
+  opacity: 0;
+}
+
+.graph__video.active {
+  transform: translate(0, 12%);
+  opacity: 1;
 }
 
 .graph__video img {
@@ -991,9 +1052,15 @@ body._lock {
      object-fit: contain;
 }
 
+.graph__wrapper {
+  width: 100%;
+  height: 100%;
+  transition: all 0.05s linear;
+}
+
 .cursor {
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   display: flex;
 }
 
@@ -1013,6 +1080,7 @@ body._lock {
   padding: 6px 13px;
   border-radius: 20px;
   margin-top: 16px;
+  animation: fly 3s ease-in-out infinite;
 }
 
 .cursor_yellow {
@@ -1064,7 +1132,21 @@ body._lock {
 
 .cursor_bottom-right {
   top: 108%;
-  left: 67%;
+  left: 68%;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .manifest {
@@ -1076,6 +1158,12 @@ body._lock {
   border-radius: 20px;
   color: var(--white);
   background: var(--black);
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.manifest__body.active {
+  transform: scale(1);
 }
 
 .manifest__header {
@@ -1148,6 +1236,22 @@ body._lock {
   background: var(--white);
   padding: 32px;
   border-radius: 20px;
+  transition: all 0.8s ease;
+  transform: translate(0, 50px);
+  opacity: 0;
+}
+
+.cards__item:nth-child(2) {
+  transition: all 0.8s ease 0.3s;
+}
+
+.cards__item:nth-child(3) {
+  transition: all 0.8s ease 0.5s;
+}
+
+.cards__item.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .cards__icon {
@@ -1194,6 +1298,14 @@ body._lock {
   font-weight: 500;
   line-height: 1.3;
   max-width: 1100px;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.demo__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .demo__title span {
@@ -1223,6 +1335,12 @@ body._lock {
   background: var(--white);
   padding: 56px;
   color: var(--black);
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.info__body.active {
+  transform: scale(1);
 }
 
 .info__header {
@@ -1435,17 +1553,41 @@ body._lock {
   font-size: 3rem;
   font-weight: 500;
   text-align: center;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.about__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about__text {
   margin-bottom: 24px;
   line-height: 1.5;
   text-align: center;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.about__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about__btn {
   width: 170px;
   height: 56px;
+  transition: all 0.8s ease 0.2s;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.about__btn.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .scroll__body {
@@ -1494,6 +1636,11 @@ body._lock {
   font-weight: 500;
   color: var(--black);
   transition: all 0.5s ease;
+  transform: scale(0.9);
+}
+
+.scroll__btn.active {
+  transform: scale(1);
 }
 
 .scroll__btn svg {
@@ -1521,6 +1668,14 @@ body._lock {
   font-size: 5rem;
   font-weight: 500;
   text-align: center;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.simple__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .simple__title span {
@@ -1532,6 +1687,14 @@ body._lock {
   color: #6B6B6B;
   text-align: center;
   margin-top: 56px;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.simple__rights.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .simple__text {
@@ -1539,6 +1702,14 @@ body._lock {
   font-size: 1.25rem;
   text-align: center;
   line-height: 1.5;
+  transition: all 0.8s ease;
+  transform: translate(0, 50px);
+  opacity: 0;
+}
+
+.simple__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .simple__btn {
@@ -1548,6 +1719,14 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.8s ease;
+  transform: translate(0, 60px);
+  opacity: 0;
+}
+
+.simple__btn.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .works {
@@ -1561,6 +1740,14 @@ body._lock {
   margin: 0 auto 64px;
   text-align: center;
   max-width: 850px;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.works__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .works__body {
@@ -1578,6 +1765,27 @@ body._lock {
   display: flex;
   flex-direction: column;
   color: var(--black);
+  position: relative;
+  transition: all 0.5s ease;
+  top: 60px;
+  opacity: 0;
+}
+
+.card-works.active {
+  opacity: 1;
+  top: 0;
+}
+
+.card-works:nth-child(1) {
+  transition: transform 0.5s ease, top 0.5s ease, opacity 0.5s ease;
+}
+
+.card-works:nth-child(2) {
+  transition: transform 0.5s ease, top 0.5s ease 0.2s, opacity 0.5s ease 0.2s;
+}
+
+.card-works:nth-child(3) {
+  transition: transform 0.5s ease, top 0.5s ease 0.4s, opacity 0.5s ease 0.4s;
 }
 
 .card-works_green {
@@ -1619,6 +1827,7 @@ body._lock {
 .card-works__image {
   position: relative;
   aspect-ratio: 437/496;
+  transition: all 0.5s ease;
 }
 
 .card-works__image img {
@@ -1745,6 +1954,14 @@ body._lock {
   font-weight: 600;
   opacity: 0.5;
   margin-bottom: 56px;
+  transition: all 0.8s ease;
+  transform: translate(60px, 0);
+  opacity: 0;
+}
+
+.product__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .product__title {
@@ -1753,6 +1970,14 @@ body._lock {
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: 56px;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(60px, 0);
+  opacity: 0;
+}
+
+.product__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .product__btn {
@@ -1762,12 +1987,28 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.8s ease 0.2s, opacity 0.8s ease 0.2s;
+  transform: translate(60px, 0);
+  opacity: 0;
+}
+
+.product__btn.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .product__image {
   flex: 1 1 50%;
   display: flex;
   justify-content: flex-end;
+  transition: all 0.8s ease 0.3s;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.product__image.active {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .product__image img {
@@ -1786,6 +2027,12 @@ body._lock {
   background: var(--white);
   padding: 56px;
   color: var(--black);
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.highlights__body.active {
+  transform: scale(1);
 }
 
 .highlights__header {
@@ -1851,6 +2098,12 @@ body._lock {
   background: #F2F1F1;
   padding: 56px;
   color: var(--black);
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.suite__body.active {
+  transform: scale(1);
 }
 
 .suite__header {
@@ -1885,10 +2138,26 @@ body._lock {
   font-family: var(--onest);
   font-size: 2.5rem;
   font-weight: 500;
+  transform: translate(40px, 0);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.suite__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .suite__text {
   line-height: 1.5;
+  transform: translate(40px, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0.1s;
+}
+
+.suite__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .suite__text:not(:last-child) {
@@ -1912,6 +2181,14 @@ body._lock {
   padding: 2px;
   background: var(--bg);
   min-height: 100px;
+  transform: translate(0, 60px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.suite__image.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .suite__image img {
@@ -1941,6 +2218,21 @@ body._lock {
 
 .suite__footer {
   margin-top: 150px;
+}
+
+.card-suite {
+  transform: translate(0, 60px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.card-suite:nth-child(2) {
+  transition: all 0.8s ease 0.2s;
+}
+
+.card-suite.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .card-suite__body {
@@ -2248,11 +2540,27 @@ body._lock {
   font-weight: 500;
   margin-bottom: 32px;
   text-align: center;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.pricing__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .pricing__text {
   text-align: center;
   line-height: 1.5;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.pricing__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .pricing__text p:not(:last-child) {
@@ -2269,6 +2577,21 @@ body._lock {
   padding-bottom: 140px;
 }
 
+.prices__body.active .info__slide .info__card {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.prices .info__slide .info__card {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.8s ease 0.2s;
+}
+
+.prices .info__slide:nth-child(2) .info__card {
+  transition: all 0.8s ease 0.3s;
+}
+
 .table {
   margin-bottom: 140px;
 }
@@ -2277,6 +2600,12 @@ body._lock {
   border-radius: 20px;
   background: var(--white);
   padding: 56px;
+  transition: all 0.8s ease;
+  transform: scale(0.9);
+}
+
+.table__body.active {
+  transform: scale(1);
 }
 
 .table__title {
@@ -3287,6 +3616,14 @@ body._lock {
 
   .scroll__btn:hover svg {
     transform: translate(10px, 0);
+  }
+
+  .card-works:hover {
+    transform: scale(1.03);
+  }
+
+  .card-works:hover .card-works__image {
+    transform: scale(1.05);
   }
 
   .footer__mail:hover {
