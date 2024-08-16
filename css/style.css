@@ -772,6 +772,7 @@ body._lock {
   width: -moz-max-content;
   width: max-content;
   pointer-events: all;
+  display: block;
   page-break-inside: avoid;
   break-inside: avoid;
 }
