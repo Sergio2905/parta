@@ -758,8 +758,8 @@ body._lock {
 
 .submenu__list {
   flex: 1 1 45%;
-  -moz-columns: 3 180px;
-       columns: 3 180px;
+  -moz-columns: 3;
+       columns: 3;
   -moz-column-gap: 24px;
        column-gap: 24px;
   padding: 20px 0;
@@ -777,8 +777,8 @@ body._lock {
   break-inside: avoid;
 }
 
-.submenu__item:not(:last-child) {
-  padding-bottom: 24px;
+.submenu__item:not(:last-child) .submenu__link {
+  margin-bottom: 24px;
 }
 
 .submenu__link {
