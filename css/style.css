@@ -951,7 +951,6 @@ body._lock {
 
 .graph__main {
   width: 79%;
-  aspect-ratio: 1085/733;
   position: relative;
   transition: all 0.8s ease;
   transform: translate(0, 60px);
@@ -964,21 +963,16 @@ body._lock {
 }
 
 .graph__main img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 100%;
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: auto;
 }
 
 .graph__tasks {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 25%;
-  aspect-ratio: 345/710;
+  width: 29%;
   transition: all 0.8s ease 0.1s;
   transform: translate(0, 30%);
   opacity: 0;
@@ -990,13 +984,9 @@ body._lock {
 }
 
 .graph__tasks img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 100%;
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: auto;
 }
 
 .graph__comments {
@@ -1004,7 +994,6 @@ body._lock {
   left: 50%;
   bottom: 0;
   width: 29%;
-  aspect-ratio: 404/380;
   transition: all 0.8s ease 0.1s;
   transform: translate(-50%, 40%);
   opacity: 0;
@@ -1016,13 +1005,9 @@ body._lock {
 }
 
 .graph__comments img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 100%;
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: auto;
 }
 
 .graph__video {
@@ -1030,7 +1015,6 @@ body._lock {
   right: 0;
   bottom: 0;
   width: 23%;
-  aspect-ratio: 312/719;
   transform: translate(0, 12%);
   transition: all 0.8s ease 0.1s;
   transform: translate(0, 30%);
@@ -1043,21 +1027,9 @@ body._lock {
 }
 
 .graph__video img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 100%;
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.graph__cursors {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .graph__wrapper {
@@ -1072,6 +1044,7 @@ body._lock {
 }
 
 .cursor svg {
+  min-width: 16px;
   width: 16px;
   height: 16px;
   fill: var(--fill);
@@ -1088,6 +1061,7 @@ body._lock {
   border-radius: 20px;
   margin-top: 16px;
   animation: fly 3s ease-in-out infinite;
+  white-space: nowrap;
 }
 
 .cursor_yellow {
@@ -1116,28 +1090,28 @@ body._lock {
 }
 
 .cursor_top-left {
-  top: 18%;
-  left: 27%;
+  top: 10%;
+  left: 93%;
 }
 
 .cursor_top-right {
-  top: 23%;
-  right: 0;
+  top: 5%;
+  left: 53%;
 }
 
 .cursor_middle {
-  left: 68%;
+  left: 72%;
   top: 50%;
 }
 
 .cursor_bottom-left {
-  bottom: 3%;
-  left: 18%;
+  bottom: 18%;
+  left: 59%;
 }
 
 .cursor_bottom-right {
-  top: 109%;
-  left: 63%;
+  top: 93%;
+  left: 93%;
 }
 
 @keyframes fly {
@@ -1597,7 +1571,6 @@ body._lock {
 
 .scroll__body {
   display: flex;
-  overflow: hidden;
   gap: 24px;
   margin-bottom: 32px;
 }
@@ -2191,7 +2164,32 @@ body._lock {
 .suite__text a {
   font-weight: 500;
   color: var(--black);
-  text-decoration: underline;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.suite__text a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translate(0, -50%);
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.suite__text a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .suite__image {
@@ -2424,6 +2422,7 @@ body._lock {
 .card-workspace__text {
   flex: 1 1 auto;
   line-height: 1.5;
+  max-width: 480px;
 }
 
 .card-workspace__text p:not(:last-child) {
@@ -3411,6 +3410,10 @@ body._lock {
     grid-row: unset;
   }
 
+  .card-workspace__text {
+    max-width: none;
+  }
+
   .spollers_revers .spollers__items {
     padding: 0;
   }
@@ -3684,6 +3687,16 @@ body._lock {
 
   .card-works:hover .card-works__image {
     transform: scale(1.05);
+  }
+
+  .suite__text a:hover {
+    padding-left: 24px;
+  }
+
+  .suite__text a:hover::before {
+    opacity: 1;
+    left: 0;
+    visibility: visible;
   }
 
   .footer__mail:hover {
