@@ -772,6 +772,8 @@ body._lock {
   width: -moz-max-content;
   width: max-content;
   pointer-events: all;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .submenu__item:not(:last-child) {
