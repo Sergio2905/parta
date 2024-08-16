@@ -939,7 +939,7 @@ body._lock {
 }
 
 .graph {
-  margin-bottom: 150px;
+  margin-bottom: 218px;
 }
 
 .graph__body {
@@ -1052,10 +1052,17 @@ body._lock {
      object-fit: contain;
 }
 
+.graph__cursors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .graph__wrapper {
   width: 100%;
   height: 100%;
-  transition: all 0.05s linear;
 }
 
 .cursor {
@@ -1109,30 +1116,28 @@ body._lock {
 }
 
 .cursor_top-left {
-  top: 0;
-  left: 12%;
-  transform: translate(0, -70%);
+  top: 18%;
+  left: 27%;
 }
 
 .cursor_top-right {
-  top: 0;
+  top: 23%;
   right: 0;
-  transform: translate(100%, -20%);
 }
 
 .cursor_middle {
-  left: 44%;
-  top: 24%;
+  left: 68%;
+  top: 50%;
 }
 
 .cursor_bottom-left {
   bottom: 3%;
-  left: 16%;
+  left: 18%;
 }
 
 .cursor_bottom-right {
-  top: 108%;
-  left: 68%;
+  top: 109%;
+  left: 63%;
 }
 
 @keyframes fly {
@@ -1637,6 +1642,7 @@ body._lock {
   color: var(--black);
   transition: all 0.5s ease;
   transform: scale(0.9);
+  margin-top: 64px;
 }
 
 .scroll__btn.active {
@@ -2002,12 +2008,12 @@ body._lock {
   display: flex;
   justify-content: flex-end;
   transition: all 0.8s ease 0.3s;
-  transform: scale(0.8);
+  transform: translate(0, 60px);
   opacity: 0;
 }
 
 .product__image.active {
-  transform: scale(1);
+  transform: translate(0, 0);
   opacity: 1;
 }
 
@@ -2051,6 +2057,20 @@ body._lock {
 
 .highlights__item {
   flex: 1 1 33.333%;
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+.highlights__item:nth-child(2) {
+  transition: all 0.8s ease 0.2s;
+}
+
+.highlights__item:nth-child(3) {
+  transition: all 0.8s ease 0.4s;
+}
+
+.highlights__item.active {
+  opacity: 1;
 }
 
 .highlights__icon {
@@ -2205,6 +2225,14 @@ body._lock {
   font-weight: 500;
   text-align: center;
   margin: 140px 0;
+  transform: translate(0, 40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.suite__more.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .suite__cards {
@@ -2846,6 +2874,10 @@ body._lock {
     font-size: calc(1rem + 4 * (100vw - 20rem) / 1120);
   }
 
+  .graph {
+    margin-bottom: calc(150px + 68 * (100vw - 320px) / 1120);
+  }
+
   .manifest__body {
     padding: calc(24px + 32 * (100vw - 320px) / 1120);
   }
@@ -3303,6 +3335,14 @@ body._lock {
   .highlights__list {
     flex-direction: column;
     gap: 32px;
+  }
+
+  .highlights__item:nth-child(2) {
+    transition: all 0.8s ease;
+  }
+
+  .highlights__item:nth-child(3) {
+    transition: all 0.8s ease;
   }
 
   .highlights__icon {
