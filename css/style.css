@@ -2346,7 +2346,32 @@ body._lock {
 .footer-suite__text a {
   font-weight: 500;
   color: var(--black);
-  text-decoration: underline;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-suite__text a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translate(0, -50%);
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.footer-suite__text a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .tool {
@@ -3698,6 +3723,16 @@ body._lock {
   }
 
   .suite__text a:hover::before {
+    opacity: 1;
+    left: 0;
+    visibility: visible;
+  }
+
+  .footer-suite__text a:hover {
+    padding-left: 24px;
+  }
+
+  .footer-suite__text a:hover::before {
     opacity: 1;
     left: 0;
     visibility: visible;
