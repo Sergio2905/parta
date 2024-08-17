@@ -1554,7 +1554,7 @@ body._lock {
 .about__btn {
   width: 170px;
   height: 56px;
-  transition: all 0.8s ease 0.2s;
+  transition: transition 0.8s ease 0.2s, opacity 0.8s ease 0.2s, background 0.3s ease;
   transform: translate(0, 40px);
   opacity: 0;
 }
@@ -1693,7 +1693,7 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease, background 0.3s ease;
   transform: translate(0, 60px);
   opacity: 0;
 }
@@ -1926,7 +1926,6 @@ body._lock {
 .product__text {
   font-size: 1.125rem;
   font-weight: 600;
-  opacity: 0.5;
   margin-bottom: 56px;
   transition: all 0.8s ease;
   transform: translate(60px, 0);
@@ -1935,7 +1934,7 @@ body._lock {
 
 .product__text.active {
   transform: translate(0, 0);
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .product__title {
@@ -2334,7 +2333,6 @@ body._lock {
 }
 
 .footer-suite__text {
-  font-size: 1.25rem;
   flex: 1 1 50%;
   line-height: 1.5;
 }
@@ -3081,10 +3079,6 @@ body._lock {
 
   .footer-suite__title {
     font-size: calc(2rem + 8 * (100vw - 20rem) / 1120);
-  }
-
-  .footer-suite__text {
-    font-size: calc(1rem + 4 * (100vw - 20rem) / 1120);
   }
 
   .tool__body {
