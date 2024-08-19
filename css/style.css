@@ -3640,6 +3640,14 @@ body._lock {
     background: none;
   }
 
+  .table__head.sticky {
+    background: #FAFAFA;
+  }
+
+  .table__head.fixed {
+    background: #FAFAFA;
+  }
+
   .table__footer .table__item {
     max-width: unset;
     flex: 1 1 auto;
