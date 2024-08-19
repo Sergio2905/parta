@@ -2708,7 +2708,29 @@ body._lock {
 }
 
 .table__body.active {
-  transform: scale(1);
+  transform: unset;
+}
+
+.table__wrapper {
+  position: relative;
+}
+
+.table__head.sticky {
+  position: fixed;
+  top: 72px;
+  background: var(--white);
+  z-index: 1;
+}
+
+.table__head.fixed {
+  background: var(--white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: unset;
+  z-index: 1;
 }
 
 .table__title {
