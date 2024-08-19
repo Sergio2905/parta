@@ -2719,13 +2719,12 @@ body._lock {
   font-family: var(--onest);
   font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 24px;
 }
 
 .table__header {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 32px;
+  padding: 24px 0 32px;
   border-bottom: 1px solid #EFEFEF;
 }
 
@@ -3163,6 +3162,7 @@ body._lock {
   }
 
   .table__header {
+    padding-top: calc(16px + 8 * (100vw - 320px) / 1120);
     padding-bottom: calc(16px + 16 * (100vw - 320px) / 1120);
   }
 
