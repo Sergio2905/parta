@@ -2876,6 +2876,9 @@ body._lock {
 
 .education__slide {
   max-width: 506px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .education__slide img {
