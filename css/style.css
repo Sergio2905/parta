@@ -208,7 +208,7 @@ body._lock {
   transform: translate(0, -50%);
   width: 20px;
   height: 20px;
-  background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
+  background: url("../img/icons/icons.svg#arrow2") center/cover no-repeat;
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -243,7 +243,7 @@ body._lock {
   transform: translate(0, -50%);
   width: 20px;
   height: 20px;
-  background: url("../img/icons/icons.svg#arrow2") center/contain no-repeat;
+  background: url("../img/icons/icons.svg#arrow2") center/cover no-repeat;
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -2846,7 +2846,6 @@ body._lock {
   font-size: 1.125rem;
   font-weight: 600;
   text-align: center;
-  opacity: 0.5;
   margin-bottom: 40px;
   transition: all 0.8s ease;
   transform: translate(0, 40px);
@@ -2855,7 +2854,7 @@ body._lock {
 
 .education__title.active {
   transform: translate(0, 0);
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .education__accent {
@@ -3063,7 +3062,7 @@ body._lock {
   order: 2;
 }
 
-.service_option3 .quotes__item_decor::after {
+.service_option3 .quotes_decor {
   top: 70%;
   right: -20%;
   transform: translate(50%, 0) rotate(-40deg);
@@ -3094,7 +3093,7 @@ body._lock {
   margin-bottom: 170px;
 }
 
-.service_option4 .quotes__item_decor::after {
+.service_option4 .quotes__decor {
   right: 75%;
   height: 170px;
 }
@@ -3150,7 +3149,7 @@ body._lock {
   order: 2;
 }
 
-.service_option6 .quotes__item_decor::after {
+.service_option6 .quotes__decor {
   top: 75%;
   right: 0;
   transform: rotate(-40deg);
@@ -3230,6 +3229,28 @@ body._lock {
   background: url("../img/icons/icons.svg#decor") center/contain no-repeat;
 }
 
+.quotes__decor {
+  content: "";
+  position: absolute;
+  top: 90%;
+  right: 0;
+  transform: translate(50%, 0);
+  width: 150px;
+  height: 206px;
+}
+
+.quotes__decor.active svg {
+  stroke-dashoffset: 0;
+}
+
+.quotes__decor svg {
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  transition: all 0.8s ease 0.1s;
+}
+
 .quotes__title {
   font-family: var(--onest);
   font-weight: 500;
@@ -3240,6 +3261,7 @@ body._lock {
 }
 
 .quotes__text {
+  font-family: var(--onest);
   font-size: 1.5rem;
   line-height: 1.5;
 }
@@ -3303,7 +3325,7 @@ body._lock {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  margin: 0 0 -10px;
+  margin: 0 0 -40px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -3443,7 +3465,7 @@ body._lock {
 
 .integrations__info {
   flex: 1 1 50%;
-  padding: 120px 146px 120px 56px;
+  padding: 56px 146px 56px 56px;
 }
 
 .integrations__info h2 {
@@ -3889,15 +3911,15 @@ body._lock {
     font-size: calc(1.5rem + 12 * (100vw - 26.25rem) / 1020);
   }
 
-  .service_option3 .quotes__item_decor::after {
+  .service_option3 .quotes_decor {
     height: calc(120px + 180 * (100vw - 420px) / 1020);
   }
 
-  .service_option4 .quotes__item_decor::after {
+  .service_option4 .quotes__decor {
     height: calc(120px + 50 * (100vw - 420px) / 1020);
   }
 
-  .service_option6 .quotes__item_decor::after {
+  .service_option6 .quotes__decor {
     height: calc(120px + 60 * (100vw - 420px) / 1020);
   }
 
@@ -3919,6 +3941,11 @@ body._lock {
   }
 
   .quotes__item_decor::after {
+    width: calc(90px + 60 * (100vw - 420px) / 1020);
+    height: calc(120px + 86 * (100vw - 420px) / 1020);
+  }
+
+  .quotes__decor {
     width: calc(90px + 60 * (100vw - 420px) / 1020);
     height: calc(120px + 86 * (100vw - 420px) / 1020);
   }
@@ -3951,7 +3978,7 @@ body._lock {
   .integrations__info {
     padding-right: calc(24px + 122 * (100vw - 420px) / 1020);
     padding-left: calc(24px + 32 * (100vw - 420px) / 1020);
-    padding-block: calc(24px + 96 * (100vw - 320px) / 1120);
+    padding-block: calc(24px + 32 * (100vw - 320px) / 1120);
   }
 
   .integrations__info h2 {
@@ -4338,6 +4365,13 @@ body._lock {
   }
 
   .quotes__item_decor::after {
+    top: 90% !important;
+    right: 0 !important;
+    transform: rotate(40deg) !important;
+    height: calc(120px + 86 * (100vw - 420px) / 1020) !important;
+  }
+
+  .quotes__decor {
     top: 90% !important;
     right: 0 !important;
     transform: rotate(40deg) !important;
