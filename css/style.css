@@ -3248,7 +3248,7 @@ body._lock {
   height: 100%;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  transition: all 0.8s ease 0.1s;
+  transition: all 1s ease 0.1s;
 }
 
 .quotes__title {
