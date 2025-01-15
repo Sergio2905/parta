@@ -2986,6 +2986,7 @@ body._lock {
 }
 
 .feedbacks__text {
+  font-family: var(--onest);
   font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 16px;
@@ -3216,17 +3217,6 @@ body._lock {
 
 .quotes__item_accent .quotes__text {
   font-size: 2.125rem;
-}
-
-.quotes__item_decor::after {
-  content: "";
-  position: absolute;
-  top: 90%;
-  right: 0;
-  transform: translate(50%, 0);
-  width: 150px;
-  height: 206px;
-  background: url("../img/icons/icons.svg#decor") center/contain no-repeat;
 }
 
 .quotes__decor {
@@ -3940,11 +3930,6 @@ body._lock {
     font-size: calc(1rem + 18 * (100vw - 26.25rem) / 1020);
   }
 
-  .quotes__item_decor::after {
-    width: calc(90px + 60 * (100vw - 420px) / 1020);
-    height: calc(120px + 86 * (100vw - 420px) / 1020);
-  }
-
   .quotes__decor {
     width: calc(90px + 60 * (100vw - 420px) / 1020);
     height: calc(120px + 86 * (100vw - 420px) / 1020);
@@ -4362,13 +4347,6 @@ body._lock {
 
   .quotes__item_decor {
     order: 4 !important;
-  }
-
-  .quotes__item_decor::after {
-    top: 90% !important;
-    right: 0 !important;
-    transform: rotate(40deg) !important;
-    height: calc(120px + 86 * (100vw - 420px) / 1020) !important;
   }
 
   .quotes__decor {
