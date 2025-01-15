@@ -2848,6 +2848,14 @@ body._lock {
   text-align: center;
   opacity: 0.5;
   margin-bottom: 40px;
+  transition: all 0.8s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.education__title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .education__accent {
@@ -2857,6 +2865,14 @@ body._lock {
   font-family: var(--onest);
   font-weight: 500;
   line-height: 1.1;
+  transition: all 0.8s ease 0.1s;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.education__accent.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .education__text {
@@ -2864,14 +2880,35 @@ body._lock {
   text-align: center;
   font-size: 1.125rem;
   line-height: 1.4;
+  transition: all 0.8s ease 0.2s;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.education__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .education__btn {
   padding: 16px 40px;
+  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.2s, background 0.3s ease;
+  transform: translate(0, 40px);
+  opacity: 0;
+}
+
+.education__btn.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .education__slider {
   margin: 0 auto;
+}
+
+.education__slider.active .education__slide {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .education__slide {
@@ -2879,6 +2916,25 @@ body._lock {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   overflow: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.education__slide:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.education__slide:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.education__slide:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+.education__slide:nth-child(5) {
+  transition-delay: 0.8s;
 }
 
 .education__slide img {
@@ -2892,6 +2948,14 @@ body._lock {
 
 .feedbacks__body {
   padding: 134px 0;
+  opacity: 0;
+  transform: translate(0, 40px) scale(0.8);
+  transition: all 0.8s ease;
+}
+
+.feedbacks__body.active {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
 }
 
 .feedbacks__slider {
@@ -3116,6 +3180,14 @@ body._lock {
 .service__body {
   padding: 80px;
   border-radius: 24px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.service__body.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .service__title {
@@ -3359,6 +3431,14 @@ body._lock {
   background: var(--black);
   color: var(--white);
   overflow: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.integrations__body.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .integrations__info {
