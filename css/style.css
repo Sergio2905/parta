@@ -4223,10 +4223,11 @@ body._lock {
 }
 
 .single__category {
+  font-family: var(--onest);
   font-size: 0.875rem;
   font-weight: 500;
   padding: 0 8px;
-  border-radius: 50px;
+  border-radius: 8px;
   border: 1px solid var(--black);
   color: var(--black);
   max-height: 24px;
