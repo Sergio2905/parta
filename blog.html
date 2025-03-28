@@ -5,7 +5,7 @@
     <title>Parta.io</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20250225150704">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250328124240">
 </head>
 
 <body>
@@ -223,78 +223,74 @@
 
             <div class="blog">
                 <div class="blog__container container">
-                    <div class="blog__main">
-                        <div class="blog__info">
-                            <h1 class="blog__title">Parta.io updates</h1>
-                            <p class="blog__desc">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy text of
-                                the printing and dummy text of the printing and .
-                            </p>
-                            <a href="#" class="blog__link">Read more</a>
-                        </div>
-                        <div class="blog__image lazy">
-                            <picture>
-                                <source data-srcset="img/blog/image.webp" srcset="img/plug.png" type="image/webp">
-                                <img data-src="img/blog/image.png" src="img/plug.png" alt="Image">
-                            </picture>
-                        </div>
-                    </div>
                     <div class="blog__body">
                         <div class="blog__sidebar">
-                            <div class="blog__categories categories" data-sticky>
-                                <a href="#" class="categories__link active">All</a>
-                                <a href="#" class="categories__link">Success stories</a>
-                                <a href="#" class="categories__link">Company news</a>
-                                <a href="#" class="categories__link">Productivity tips</a>
-                                <a href="#" class="categories__link">Industry trends and insights</a>
-                                <a href="#" class="categories__link">Leadership and opinions</a>
-                                <a href="#" class="categories__link">Events</a>
-                                <a href="#" class="categories__link">Behind-the-scenes </a>
+                            <div class="blog__sticky" data-sticky>
+                                <div class="blog__main">
+                                    <h1 class="blog__title">Blog</h1>
+                                    <p class="blog__desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    </p>
+                                </div>
+                                <div class="blog__categories categories">
+                                    <a href="#" class="categories__link active">All</a>
+                                    <a href="#" class="categories__link">Success stories</a>
+                                    <a href="#" class="categories__link">Company news</a>
+                                    <a href="#" class="categories__link">Productivity tips</a>
+                                    <a href="#" class="categories__link">Industry trends and insights</a>
+                                    <a href="#" class="categories__link">Leadership and opinions</a>
+                                    <a href="#" class="categories__link">Events</a>
+                                    <a href="#" class="categories__link">Behind-the-scenes </a>
+                                </div>
+                                <button type="button" class="blog__btn">
+                                    Stay updated
+                                    <svg>
+                                        <use href="img/icons/icons.svg#bell"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <ul class="blog__list">
                             <li class="blog__item article article_extra">
-                                <div class="article__body">
-                                    <div class="article__front">
-                                        <a href="#" class="article__image lazy">
-                                            <picture>
-                                                <source data-srcset="img/blog/logo.webp" srcset="img/plug.png"
-                                                    type="image/webp">
-                                                <img data-src="img/blog/logo.png" src="img/plug.png" alt="Image">
-                                            </picture>
-                                        </a>
-                                        <a href="#" class="article__category">
-                                            productivity tips
-                                        </a>
-                                        <a href="#" class="article__title">
-                                            Poetic scales digital innovation for clients, launching 800+ websites
-                                        </a>
-                                        <div class="article__footer">
-                                            <p>
-                                                <span>3x</span> lorem ipsum
+                                <a href="#" class="article__body">
+                                    <div class="article__main">
+                                        <div class="article__front">
+                                            <div class="article__image lazy">
+                                                <picture>
+                                                    <source data-srcset="img/blog/logo.webp" srcset="img/plug.png"
+                                                        type="image/webp">
+                                                    <img data-src="img/blog/logo.png" src="img/plug.png" alt="Image">
+                                                </picture>
+                                            </div>
+                                            <div class="article__category">
+                                                productivity tips
+                                            </div>
+                                            <div class="article__title">
+                                                Poetic scales digital innovation for clients, launching 800+ websites
+                                            </div>
+                                        </div>
+                                        <div class="article__back">
+                                            <p class="article__text">
+                                                “Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry
+                                                dummy
+                                                text of the printing and dummy text of the printing and Lorem Ipsum is
+                                                simply
+                                                dummy text of the printing and typesetting industry dummy text of the
+                                                printing
+                                                and dummy text of the printing”
+                                            </p>
+                                            <p class="article__author">
+                                                by Jorge Farah
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="article__back">
-                                        <p class="article__text">
-                                            “Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                                            dummy
-                                            text of the printing and dummy text of the printing and Lorem Ipsum is
-                                            simply
-                                            dummy text of the printing and typesetting industry dummy text of the
-                                            printing
-                                            and dummy text of the printing”
+                                    <div class="article__footer">
+                                        <p>
+                                            <span>3x</span> lorem ipsum
                                         </p>
-                                        <p class="article__author">
-                                            by Jorge Farah
-                                        </p>
-                                        <div class="article__footer">
-                                            <p>
-                                                <a href="#" class="article__more">Read more</a>
-                                            </p>
-                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li class="blog__item article">
                                 <div class="article__body">
@@ -483,9 +479,10 @@
             </div>
 
             <div class="join">
-                <div class="join__container container">
+                <div class="join__wrapper">
                     <div class="join__body">
-                        <p class="join__text">Join the community</p>
+                        <h2 class="join__title">Stay updated with our latest news!</h2>
+                        <p class="join__text">Subscribe and stay informed about important updates.</p>
                         <form action="#" class="join__form">
                             <input class="join__input" type="text" placeholder="email" name="email">
                             <button type="submit" class="join__btn btn-green">
@@ -597,7 +594,7 @@
 </footer>
     </div>
 
-    <script src="js/app.min.js?_v=20250225150704" defer></script>
+    <script src="js/app.min.js?_v=20250328124240" defer></script>
 </body>
 
 </html>
