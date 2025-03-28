@@ -3911,12 +3911,16 @@ body._lock {
   font-family: var(--onest);
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 3px 8px;
+  line-height: 1;
+  padding: 0 8px;
   border-radius: 8px;
   border: 1px solid var(--black);
   color: var(--black);
   margin-top: 24px;
-  max-height: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .article__title {
@@ -4226,11 +4230,15 @@ body._lock {
   font-family: var(--onest);
   font-size: 0.875rem;
   font-weight: 500;
+  line-height: 1;
   padding: 0 8px;
   border-radius: 8px;
   border: 1px solid var(--black);
   color: var(--black);
-  max-height: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .single__date {
