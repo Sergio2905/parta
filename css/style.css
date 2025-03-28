@@ -4628,7 +4628,7 @@ body._lock {
   left: 0;
   width: 100%;
   height: var(--app-height);
-  z-index: 50;
+  z-index: 1000;
   background: rgba(27, 27, 27, 0.6);
   opacity: 0;
   visibility: hidden;
