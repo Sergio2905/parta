@@ -3985,6 +3985,7 @@ body._lock {
 
 .single_black .single__main {
   background: #000;
+  margin-bottom: 120px;
 }
 
 .single_black .single__back {
@@ -4277,6 +4278,7 @@ body._lock {
   margin: 0;
   max-height: 50px;
   width: auto;
+  border-radius: 0;
 }
 
 .single__title {
@@ -4698,15 +4700,18 @@ body._lock {
 
 .join__input {
   background: #F6F6F6;
+  border: 1px solid #F6F6F6;
   color: var(--black);
-  border: none;
   padding: 18px 16px;
   border-radius: 10px;
   transition: all 0.5s ease;
+  box-shadow: inset 40px 40px 0px 40px #F6F6F6;
 }
 
 .join__input:focus {
-  background: var(--blue);
+  background: var(--white);
+  border: 1px solid #47B28E;
+  box-shadow: inset 40px 40px 0px 40px var(--white);
 }
 
 .join__btn {
