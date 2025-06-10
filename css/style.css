@@ -191,6 +191,11 @@ body._lock {
   position: relative;
   overflow: hidden;
   background: var(--gray);
+  transition: all 0.5s ease;
+}
+
+.wrapper_black {
+  background: var(--black);
 }
 
 .container {
@@ -1979,11 +1984,6 @@ body._lock {
 
 .reviews {
   padding: 140px 0;
-  transition: all 0.5s ease;
-}
-
-.reviews_black {
-  background: var(--black);
 }
 
 .reviews_black .reviews__title,
