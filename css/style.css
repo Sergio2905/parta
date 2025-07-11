@@ -420,6 +420,78 @@ body._lock {
   display: none;
 }
 
+.rating {
+  margin-bottom: 16px;
+  max-width: 130px;
+  width: 100%;
+}
+
+.rating__body {
+  height: 22px;
+  background: url("../img/icons/icons.svg#star") center left/26px 32px repeat-x;
+  width: 0;
+}
+
+.tabs__header {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(27, 27, 27, 0.1);
+  padding: 4px;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0.3s;
+}
+
+.tabs__header.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.tabs__link {
+  font-family: var(--onest);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #757575;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.tabs__link.active {
+  color: var(--black);
+  background: #F2F1F1;
+}
+
+.tabs__body {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.tabs__block {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.2s linear;
+}
+
+.tabs__block.active {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s linear 0.4s;
+}
+
 /**
  * Swiper 11.1.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1381,6 +1453,108 @@ body._lock {
      object-fit: contain;
 }
 
+.features {
+  padding: 64px 0;
+}
+
+.features__body {
+  height: 70vh;
+}
+
+.features__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.features__item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+  scale: 1.1;
+  padding-top: 72px;
+  display: flex;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #FDEAFF;
+}
+
+.features__info {
+  flex: 1 1 40%;
+  padding: 0 40px 72px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.features__title {
+  font-family: var(--onest);
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #000;
+  flex: 1 1 auto;
+}
+
+.features__desc {
+  font-family: var(--onest);
+  font-size: 1.375rem;
+  color: #000;
+  margin-top: 32px;
+}
+
+.features__link {
+  font-family: var(--onest);
+  font-weight: 500;
+  color: var(--black);
+  position: relative;
+  transition: all 0.3s ease;
+  margin-top: 32px;
+}
+
+.features__link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translate(0, -50%);
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/icons.svg#arrow2") center/cover no-repeat;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.features__link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.features__image {
+  flex: 1 1 60%;
+  position: relative;
+}
+
+.features__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top left;
+     object-position: top left;
+}
+
 .manifest {
   margin-bottom: 32px;
 }
@@ -2138,6 +2312,7 @@ body._lock {
   grid-template-columns: 64px auto;
   align-items: center;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .reviews__photo {
@@ -2173,10 +2348,6 @@ body._lock {
   color: #757575;
   margin-top: 8px;
   padding-left: 24px;
-}
-
-.reviews__rating {
-  margin-bottom: 16px;
 }
 
 .reviews__body {
@@ -3163,7 +3334,7 @@ body._lock {
 .pricing__body {
   max-width: 760px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 0 40px;
 }
 
 .pricing__title {
@@ -5670,7 +5841,7 @@ body._lock {
   }
 
   .pricing__body {
-    padding: calc(64px + 36 * (100vw - 320px) / 1120) 0;
+    padding-top: calc(64px + 36 * (100vw - 320px) / 1120) 0;
   }
 
   .pricing__title {
@@ -6066,6 +6237,27 @@ body._lock {
 @media (max-width: 992px) {
   .cursor {
     display: none;
+  }
+
+  .features__item {
+    padding-top: 32px;
+  }
+
+  .features__info {
+    padding: 0 32px 32px 32px;
+  }
+
+  .features__title {
+    font-size: 1.375rem;
+  }
+
+  .features__desc {
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+
+  .features__link {
+    margin-top: 16px;
   }
 
   .manifest__content {
@@ -6508,6 +6700,15 @@ body._lock {
     padding: 0;
   }
 
+  .features__item {
+    flex-direction: column;
+    padding: 24px 0 0 32px;
+  }
+
+  .features__info {
+    padding: 0 32px 32px 0;
+  }
+
   .feedbacks__slide {
     flex-direction: column;
   }
@@ -6917,6 +7118,10 @@ body._lock {
     stroke: var(--black);
   }
 
+  .tabs__link:hover {
+    background: #F2F1F1;
+  }
+
   .header_black:not(.fixed, .hover, ._active) .btn-white:hover {
     border-color: var(--green);
     color: var(--black);
@@ -6927,6 +7132,16 @@ body._lock {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+  }
+
+  .features__link:hover {
+    padding-left: 24px;
+  }
+
+  .features__link:hover::before {
+    opacity: 1;
+    left: 0;
+    visibility: visible;
   }
 
   .card-info__link:hover {
