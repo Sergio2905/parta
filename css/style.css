@@ -1254,6 +1254,7 @@ body._lock {
 }
 
 .new__title {
+  position: relative;
   font-family: var(--onest);
   font-size: 5rem;
   font-weight: 500;
@@ -1264,6 +1265,7 @@ body._lock {
 }
 
 .new__desc {
+  position: relative;
   margin-top: 40px;
   font-family: var(--onest);
   font-size: 1.25rem;
@@ -1274,10 +1276,29 @@ body._lock {
 }
 
 .new__btns {
+  position: relative;
   margin-top: 40px;
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.new__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.new__bg video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .creativity {
